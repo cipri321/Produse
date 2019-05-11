@@ -1,12 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 	return (
 		<div>
-			Header
+			<Link to="/" style={ linkStyle }>Home</Link>
+			{' '}|{' '}
+			<Link to="items" style={ linkStyle }>Items</Link>
 		</div>
 	);
+}
+
+const linkStyle = {
+	color: '#fff',
+	textDecoration: 'none'
 }
 
 export default Navbar;

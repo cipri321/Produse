@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './Components/Pages/Home';
 import Navbar from './Components/Layout/Navbar';
 import './App.css';
 
@@ -6,9 +8,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar navbar-dark bg-dark" style={ navStyle }>
-          <Navbar className="navbar navbar-dark bg-dark"/>
-        </nav>
+        <Router>
+          <nav className="navbar navbar-dark bg-dark" style={ navStyle }>
+            <Navbar/>
+          </nav>
+          <Route exact path="/" component={ Home }/>
+
+        </Router>
       </div>
     );
   }
