@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Components/Pages/Home';
 import Navbar from './Components/Layout/Navbar';
 import './App.css';
-
+import ProductList from './Components/Pages/ProductList'
 class App extends Component {
   render() {
     return (
@@ -13,7 +13,7 @@ class App extends Component {
             <Navbar/>
           </nav>
           <Route exact path="/" component={ Home }/>
-
+          <Route exact path="/items" component={ ProductList }/>
         </Router>
       </div>
     );
