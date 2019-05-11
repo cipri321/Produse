@@ -6,10 +6,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
+        <nav className="navbar navbar-dark bg-dark" style={ navStyle }>
+          <Navbar className="navbar navbar-dark bg-dark"/>
+        </nav>
       </div>
     );
   }
+}
+
+const navStyle = {
+  color: '#fff'
 }
 
 export default App;
